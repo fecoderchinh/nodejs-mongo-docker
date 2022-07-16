@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-mongo-docker",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/torchhound/mongo-crud.svg?branch=master)](https://travis-ci.org/torchhound/mongo-crud)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fecoderchinh/nodejs-mongo-docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fecoderchinh/nodejs-mongo-docker/issues"
+  },
+  "homepage": "https://github.com/fecoderchinh/nodejs-mongo-docker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
