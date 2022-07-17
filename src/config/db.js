@@ -5,9 +5,10 @@ async function ConnectDB(mongoURL) {
         await mongoose.connect(mongoURL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            useCreateIndex: true,
         });
 
-        console.log(`MongoDB connect to ${mongoURL}`);
+        // console.log(`MongoDB connect to ${mongoURL}`);
     } catch (err) {
         console.log(err);
     }
