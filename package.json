@@ -4,12 +4,13 @@
   "description": "[![Build Status](https://travis-ci.org/torchhound/mongo-crud.svg?branch=master)](https://travis-ci.org/torchhound/mongo-crud)",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
     "start:prod": "docker compose -f docker-compose.prod.yml up -d",
-    "start:dev": "docker compose -f docker-compose.yml up -d",
+    "start:dev": "concurrently \"npm run watch:sass\" \"docker compose -f docker-compose.yml up -d\"",
+    "watch:sass": "sass --watch ./src/public/scss:./src/public/css",
     "build:prod": "docker compose -f docker-compose.prod.yml build",
-    "build:dev": "docker compose -f docker-compose.yml build"
+    "build:dev": "docker compose -f docker-compose.yml build",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "sass": "^1.53.0",
+    "concurrently": "^7.2.2"
   }
 }

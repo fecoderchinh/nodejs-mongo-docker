@@ -1,0 +1,11 @@
+.my-bg {
+  &-primary {
+    background-color: red;
+  }
+  &-secondary {
+    background-color: green;
+  }
+  &-info {
+    background-color: blue;
+  }
+}
